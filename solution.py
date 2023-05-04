@@ -2,10 +2,11 @@ import pandas as pd
 import numpy as np
 
 
-chat_id = 123456 # Ваш chat ID, не меняйте название переменной
+chat_id = 515069313 # Ваш chat ID, не меняйте название переменной
 
-def solution(...) -> bool: # Одна или две выборке на входе, заполняется исходя из условия
+def solution(x, y) -> bool: # Одна или две выборке на входе, заполняется исходя из условия
     # Измените код этой функции
     # Это будет вашим решением
     # Не меняйте название функции и её аргументы
-    return ... # Ваш ответ, True или False
+    res = mannwhitneyu(x, y, alternative='less')
+    return res.pvalue < 0.05 # Ваш ответ, True или False
